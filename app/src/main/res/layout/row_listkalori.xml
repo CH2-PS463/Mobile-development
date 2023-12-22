@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listkaloriRowModel" type="com.satriasayur.app.modules.hasildeteksi.data.model.ListkaloriRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowkalori"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:ellipsize="end" android:id="@+id/txtKalori"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_1pxv"
+            android:layout_weight="0.21" android:layout_width="0dp"
+            android:singleLine="true"
+            android:text="@{listkaloriRowModel.txtKalori}"
+            style="@style/txtInterregular12" tools:text="@string/lbl_kalori"/>
+        <LinearLayout android:id="@+id/linearRowkcalcounter"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_53pxh"
+            android:layout_weight="0.79" android:layout_width="0dp" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtKcalCounter"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_weight="0.43" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{listkaloriRowModel.txtKcalCounter}"
+                style="@style/txtIntersemibold12_1" tools:text="@string/lbl_19_kcal"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtVitaminA"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_1pxv"
+                android:layout_marginStart="@dimen/_26pxh"
+                android:layout_weight="0.57" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{listkaloriRowModel.txtVitaminA}"
+                style="@style/txtInterregular12" tools:text="@string/lbl_vitamin_a"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

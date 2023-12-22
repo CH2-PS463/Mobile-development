@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.satriasayur.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.satriasayur.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.satriasayur.app.modules.landingpage.ui.LandingPageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.satriasayur.app.modules.register.ui.RegisterActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.satriasayur.app.modules.hasildeteksi.ui.HasilDeteksiActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.satriasayur.app.modules.caritempatbelisayur.ui.CariTempatBeliSayurActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.satriasayur.app.modules.scansayuran.ui.ScanSayuranActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true"
+            android:name="com.satriasayur.app.modules.spalshscreen.ui.SpalshscreenActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.satriasayur.app.modules.dashboard.ui.DashboardActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.satriasayur.app.modules.caritempatbelisayurone.ui.CariTempatBeliSayurOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.satriasayur.app.modules.login.ui.LoginActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.satriasayur.app.modules.datadiri.ui.DataDiriActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.satriasayur.app.modules.hasilperiksasementara.ui.HasilPeriksaSementaraActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

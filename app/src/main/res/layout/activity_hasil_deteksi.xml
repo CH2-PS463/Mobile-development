@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="hasilDeteksiVM" type="com.satriasayur.app.modules.hasildeteksi.data.viewmodel.HasilDeteksiVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnmegaphone"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStyleyellow_200cornerRadius">
+            <LinearLayout android:id="@+id/linearRowmegaphone"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_12pxv"
+                android:layout_marginEnd="@dimen/_13pxh"
+                android:layout_marginStart="@dimen/_14pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageMegaphone"
+                    android:layout_height="@dimen/_12pxh"
+                    android:layout_marginBottom="@dimen/_4pxv"
+                    android:layout_marginTop="@dimen/_4pxv"
+                    android:layout_width="@dimen/_18pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_megaphone"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_megaphone"/>
+                <LinearLayout android:id="@+id/linearRowlogosatriasayur"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_93pxh"
+                    android:layout_weight="0.93"
+                    android:layout_width="0dp" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageLogoSatriaSayur"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_marginBottom="@dimen/_1pxv"
+                        android:layout_width="@dimen/_20pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_logosatriasayur"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_logosatriasayur"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSatriaSayur"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5pxh"
+                        android:layout_marginTop="@dimen/_1pxv"
+                        android:layout_weight="0.68"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{hasilDeteksiVM.hasilDeteksiModel.txtSatriaSayur}"
+                        style="@style/txtIntersemibold15" tools:text="@string/lbl_satriasayur"/>
+                    <ImageView android:id="@+id/imageLock"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_marginBottom="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_92pxh"
+                        android:layout_width="@dimen/_20pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_lock"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_lock"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_19pxv"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearHasilDeteksi"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_103pxv"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtHasilDeteksi"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{hasilDeteksiVM.hasilDeteksiModel.txtHasilDeteksi}"
+                    style="@style/txtInterbold12" tools:text="@string/lbl_hasil_deteksi"/>
+                <FrameLayout android:id="@+id/frameStackiucounter"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_337pxv"
+                    android:layout_marginTop="@dimen/_20pxv" android:layout_width="@dimen/_320pxh">
+                    <LinearLayout
+                        android:id="@+id/linearColumniucounter"
+                        android:layout_gravity="bottom|end"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_58pxv"
+                        android:layout_marginEnd="@dimen/_21pxh"
+                        android:layout_marginStart="@dimen/_21pxh"
+                        android:layout_marginTop="@dimen/_58pxv"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:gravity="start"
+                            android:id="@+id/txtIuCounter"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{hasilDeteksiVM.hasilDeteksiModel.txtIuCounter}"
+                            style="@style/txtIntersemibold12_1" tools:text="@string/lbl_6300_iu"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtWeight"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10pxh"
+                            android:layout_marginTop="@dimen/_8pxv"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{hasilDeteksiVM.hasilDeteksiModel.txtWeight}"
+                            style="@style/txtIntersemibold12_1" tools:text="@string/lbl_55_mg"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtWeightOne"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_6pxh"
+                            android:layout_marginTop="@dimen/_6pxv"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{hasilDeteksiVM.hasilDeteksiModel.txtWeightOne}"
+                            style="@style/txtIntersemibold12_1" tools:text="@string/lbl_113_mg"/>
+                    </LinearLayout>
+                    <ImageView android:id="@+id/imageRectangleTwo"
+                        android:layout_gravity="top|start"
+                        android:layout_height="@dimen/_161pxv"
+                        android:layout_marginBottom="@dimen/_10pxv"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        cornerRadius="@{@dimen/_15pxh}"
+                        imageRes="@{@drawable/img_rectangle7}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle7"/>
+                    <LinearLayout android:id="@+id/linearColumnkangkung"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical" style="@style/groupStylecornerRadius">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtKangkung"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_21pxh"
+                            android:layout_marginStart="@dimen/_21pxh"
+                            android:layout_marginTop="@dimen/_173pxv"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{hasilDeteksiVM.hasilDeteksiModel.txtKangkung}"
+                            style="@style/txtInterbold13" tools:text="@string/lbl_kangkung"/>
+                        <View android:background="@color/teal_800"
+                            android:id="@+id/lineVectorEight"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_2pxv"
+                            android:layout_marginEnd="@dimen/_21pxh"
+                            android:layout_marginStart="@dimen/_21pxh"
+                            android:layout_marginTop="@dimen/_13pxv" android:layout_width="@dimen/_278pxh"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnkalori"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_14pxv"
+                            android:layout_marginEnd="@dimen/_21pxh"
+                            android:layout_marginStart="@dimen/_21pxh"
+                            android:layout_marginTop="@dimen/_13pxv"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerListkalori"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:nestedScrollingEnabled="false"
+                                android:orientation="vertical"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                itemSpace="@{@dimen/_6pxh}"
+                                tools:itemCount="3" tools:listitem="@layout/row_listkalori"/>
+                            <LinearLayout android:gravity="start"
+                                android:id="@+id/linearRowlemak"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_10pxh"
+                                android:layout_marginTop="@dimen/_5pxv"
+                                android:layout_width="wrap_content" android:orientation="horizontal">
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtLemak"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_1pxv"
+                                    android:layout_weight="0.51"
+                                    android:layout_width="0dp"
+                                    android:singleLine="true"
+                                    android:text="@{hasilDeteksiVM.hasilDeteksiModel.txtLemak}"
+                                    style="@style/txtInterregular12" tools:text="@string/lbl_lemak"/>
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtWeightFour"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_50pxh"
+                                    android:layout_marginTop="@dimen/_1pxv"
+                                    android:layout_weight="0.49"
+                                    android:layout_width="0dp"
+                                    android:singleLine="true"
+                                    android:text="@{hasilDeteksiVM.hasilDeteksiModel.txtWeightFour}"
+                                    style="@style/txtIntersemibold12_1" tools:text="@string/lbl_0_20_g"/>
+                            </LinearLayout>
+                            <LinearLayout android:gravity="start"
+                                android:id="@+id/linearRowkolesterol"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_10pxh"
+                                android:layout_marginTop="@dimen/_5pxv"
+                                android:layout_width="wrap_content" android:orientation="horizontal">
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtKolesterol"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_1pxv"
+                                    android:layout_weight="0.58"
+                                    android:layout_width="0dp"
+                                    android:singleLine="true"
+                                    android:text="@{hasilDeteksiVM.hasilDeteksiModel.txtKolesterol}"
+                                    style="@style/txtInterregular12" tools:text="@string/lbl_kolesterol"/>
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtWeightFive"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_28pxh"
+                                    android:layout_marginTop="@dimen/_1pxv"
+                                    android:layout_weight="0.42"
+                                    android:layout_width="0dp"
+                                    android:singleLine="true"
+                                    android:text="@{hasilDeteksiVM.hasilDeteksiModel.txtWeightFive}"
+                                    style="@style/txtIntersemibold12_1" tools:text="@string/lbl_0_0_mg"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+                <FrameLayout android:id="@+id/frameStackresepresepyan"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_389pxv"
+                    android:layout_marginTop="@dimen/_20pxv" android:layout_width="@dimen/_320pxh">
+                    <TextView android:ellipsize="end"
+                        android:gravity="top|start"
+                        android:id="@+id/txtResepresepYan"
+                        android:layout_gravity="top|center"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_22pxv"
+                        android:layout_marginEnd="@dimen/_49pxh"
+                        android:layout_marginStart="@dimen/_49pxh"
+                        android:layout_marginTop="@dimen/_22pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{hasilDeteksiVM.hasilDeteksiModel.txtResepresepYan}"
+                        style="@style/txtInterbold12_1" tools:text="@string/msg_resep_resep_yan"/>
+                    <LinearLayout
+                        android:id="@+id/linearColumnrectangletwentynine"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical" style="@style/groupStylecornerRadius">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:gravity="center_horizontal"
+                            android:id="@+id/recyclerListrectangletwentynine"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_21pxh"
+                            android:layout_marginStart="@dimen/_21pxh"
+                            android:layout_marginTop="@dimen/_51pxv"
+                            android:layout_width="match_parent"
+                            android:nestedScrollingEnabled="false"
+                            android:orientation="vertical"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            itemSpace="@{@dimen/_15pxh}"
+                            tools:itemCount="3" tools:listitem="@layout/row_listrectangletwentynine"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:id="@+id/btnLihatLebihBanyak"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_24pxv"
+                            android:layout_marginBottom="@dimen/_14pxv"
+                            android:layout_marginEnd="@dimen/_21pxh"
+                            android:layout_marginStart="@dimen/_21pxh"
+                            android:layout_marginTop="@dimen/_15pxv"
+                            android:layout_width="@dimen/_156pxh"
+                            android:paddingBottom="@dimen/_5pxv"
+                            android:paddingEnd="@dimen/_30pxh"
+                            android:paddingStart="@dimen/_30pxh"
+                            android:paddingTop="@dimen/_5pxv"
+                            android:singleLine="true"
+                            android:text="@string/msg_lihat_lebih_ban"
+                            android:textAllCaps="false"
+                            style="@style/btnSolidRoundedOutline_1" tools:text="@string/msg_lihat_lebih_ban"/>
+                    </LinearLayout>
+                </FrameLayout>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearRowlinkedin"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_20pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylegreen_2">
+                    <ImageView android:id="@+id/imageLinkedin"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_marginBottom="@dimen/_10pxv"
+                        android:layout_marginStart="@dimen/_48pxh"
+                        android:layout_marginTop="@dimen/_11pxv"
+                        android:layout_width="@dimen/_14pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_linkedin"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_linkedin"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtCariDimanaBel"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_9pxv"
+                        android:layout_marginEnd="@dimen/_42pxh"
+                        android:layout_marginStart="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_13pxv"
+                        android:layout_weight="0.93"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{hasilDeteksiVM.hasilDeteksiModel.txtCariDimanaBel}"
+                        style="@style/txtIntersemibold15_1" tools:text="@string/msg_cari_dimana_bel"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearRowsend"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_20pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStyleyellow_2">
+                    <ImageView android:id="@+id/imageSend"
+                        android:layout_height="@dimen/_21pxh"
+                        android:layout_marginBottom="@dimen/_9pxv"
+                        android:layout_marginStart="@dimen/_85pxh"
+                        android:layout_marginTop="@dimen/_10pxv"
+                        android:layout_width="@dimen/_21pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_send"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_send"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBuatDietPlan"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_11pxv"
+                        android:layout_marginEnd="@dimen/_84pxh"
+                        android:layout_marginStart="@dimen/_6pxh"
+                        android:layout_marginTop="@dimen/_11pxv"
+                        android:layout_weight="0.83"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{hasilDeteksiVM.hasilDeteksiModel.txtBuatDietPlan}"
+                        style="@style/txtIntersemibold15_1" tools:text="@string/lbl_buat_diet_plan"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <FrameLayout android:id="@+id/frameBottombar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" style="@style/groupStyleyellow_1">
+            <FrameLayout android:id="@+id/frameStackrectanglefourteen"
+                android:layout_height="@dimen/_49pxv"
+                android:layout_marginBottom="@dimen/_2pxv"
+                android:layout_marginTop="@dimen/_2pxv" android:layout_width="@dimen/_214pxh">
+                <View
+                    android:background="@drawable/rectangle_bg_green_200_radius_10"
+                    android:id="@+id/viewRectangleFourteen"
+                    android:layout_height="@dimen/_49pxh" android:layout_width="@dimen/_43pxh"/>
+                <LinearLayout android:id="@+id/linearRowgrid"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8pxv"
+                    android:layout_marginTop="@dimen/_9pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout android:id="@+id/linearColumngrid"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_1pxv"
+                        android:layout_marginTop="@dimen/_1pxv"
+                        android:layout_weight="1"
+                        android:layout_width="0dp" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageGrid"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_grid_teal_800"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_grid_teal_800"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtDashboard"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_2pxh"
+                            android:layout_marginStart="@dimen/_2pxh"
+                            android:layout_marginTop="@dimen/_4pxv"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{hasilDeteksiVM.hasilDeteksiModel.txtDashboard}"
+                            style="@style/txtIntersemibold6" tools:text="@string/lbl_dashboard"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearColumnlockOne"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1pxv"
+                        android:layout_weight="1"
+                        android:layout_width="0dp" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageLockOne"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_16pxh"
+                            android:layout_width="@dimen/_16pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_lock_teal_800"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_lock_teal_800"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtAkunSaya"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_2pxh"
+                            android:layout_marginStart="@dimen/_2pxh"
+                            android:layout_marginTop="@dimen/_6pxv"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{hasilDeteksiVM.hasilDeteksiModel.txtAkunSaya}"
+                            style="@style/txtIntersemibold6" tools:text="@string/lbl_akun_saya"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearColumnsearch"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1pxv"
+                        android:layout_weight="1"
+                        android:layout_width="0dp" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageSearch"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_16pxh"
+                            android:layout_width="@dimen/_16pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_search_teal_800"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_search_teal_800"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtPengaturan"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_2pxh"
+                            android:layout_marginStart="@dimen/_2pxh"
+                            android:layout_marginTop="@dimen/_6pxv"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{hasilDeteksiVM.hasilDeteksiModel.txtPengaturan}"
+                            style="@style/txtIntersemibold6" tools:text="@string/lbl_pengaturan"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

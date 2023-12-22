@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearRowvitamina"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:ellipsize="end" android:id="@+id/txtVitaminA"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_1pxv"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_weight="0.31" android:layout_width="0dp"
+            android:singleLine="true"
+            android:text="@string/lbl_vitamin_a"
+            style="@style/txtInriaSansbold6" tools:text="@string/lbl_vitamin_a"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtThree"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3pxh"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_weight="0.02" android:layout_width="0dp"
+            android:singleLine="true" android:text="@string/lbl"
+            style="@style/txtInriaSansbold6" tools:text="@string/lbl"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtIuCounter"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_1pxv"
+            android:layout_marginStart="@dimen/_3pxh"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_weight="0.25" android:layout_width="0dp"
+            android:singleLine="true" android:text="@string/lbl_6600_iu"
+            style="@style/txtInriaSansbold6" tools:text="@string/lbl_6600_iu"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtKalori"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_1pxv"
+            android:layout_marginStart="@dimen/_6pxh"
+            android:layout_weight="0.18" android:layout_width="0dp"
+            android:singleLine="true" android:text="@string/lbl_kalori"
+            style="@style/txtInriaSansbold6" tools:text="@string/lbl_kalori"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtFour"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3pxh"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_weight="0.02" android:layout_width="0dp"
+            android:singleLine="true" android:text="@string/lbl"
+            style="@style/txtInriaSansbold6" tools:text="@string/lbl"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtKkalCounter"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_1pxv"
+            android:layout_marginStart="@dimen/_3pxh"
+            android:layout_weight="0.21" android:layout_width="0dp"
+            android:singleLine="true" android:text="@string/lbl_19_kkal"
+            style="@style/txtInriaSansbold6" tools:text="@string/lbl_19_kkal"/>
+    </LinearLayout>
+</layout>

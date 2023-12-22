@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="spalshscreenVM" type="com.satriasayur.app.modules.spalshscreen.data.viewmodel.SpalshscreenVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearSpalshScreen"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegreen_200">
+        <ImageView android:id="@+id/imageLogoSatriaSayur"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_229pxh"
+            android:layout_marginEnd="@dimen/_81pxh"
+            android:layout_marginStart="@dimen/_82pxh"
+            android:layout_marginTop="@dimen/_186pxv"
+            android:layout_width="@dimen/_225pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_logosatriasayur}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_logosatriasayur"/>
+        <EditText android:background="@android:color/transparent"
+            android:ellipsize="end"
+            android:hint="@string/lbl_satriasayur"
+            android:id="@+id/etSatriaSayur" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_77pxh"
+            android:layout_marginStart="@dimen/_82pxh"
+            android:layout_marginTop="@dimen/_23pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@={spalshscreenVM.spalshscreenModel.etSatriaSayurValue}"
+            android:textColorHint="@color/black_900"
+            style="@style/etIntersemibold40" tools:ignore="Autofill"/>
+    </LinearLayout>
+</layout>

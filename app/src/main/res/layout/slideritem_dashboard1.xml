@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageSliderSliderrectangletwoModel" type="com.satriasayur.app.modules.dashboard.data.model.ImageSliderSliderrectangletwoModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frameStackrectangletwo"
+        android:layout_height="match_parent" android:layout_width="match_parent">
+        <ImageView android:id="@+id/imageRectangleTwo"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_135pxh"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_15pxh}"
+            imageUrl="@{imageSliderSliderrectangletwoModel.imageRectangleTwo}"
+            placeHolder="@{@drawable/image_not_found}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle2"/>
+        <LinearLayout android:id="@+id/linearColumncahkangkung"
+            android:layout_gravity="bottom|start"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylegreen_200_a5cornerRadius">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCahKangkung"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_13pxh"
+                android:layout_marginStart="@dimen/_13pxh"
+                android:layout_marginTop="@dimen/_6pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{imageSliderSliderrectangletwoModel.txtCahKangkung}"
+                style="@style/txtInriaSansbold12" tools:text="@string/lbl_cah_kangkung"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerListvitamina"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_3pxv"
+                android:layout_marginEnd="@dimen/_13pxh"
+                android:layout_marginStart="@dimen/_13pxh"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_1pxh}" tools:itemCount="2" tools:listitem="@layout/row_listvitamina"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

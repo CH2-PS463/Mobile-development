@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listrectangletwentynine1RowModel" type="com.satriasayur.app.modules.caritempatbelisayurone.data.model.Listrectangletwentynine1RowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnrectangletwentynine"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_1">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearRowrectangletwentynine"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_6pxv"
+            android:layout_marginEnd="@dimen/_12pxh"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_marginTop="@dimen/_7pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylecornerRadius_1">
+            <ImageView android:id="@+id/imageRectangleTwentyNine"
+                android:layout_height="@dimen/_46pxh"
+                android:layout_marginBottom="@dimen/_1pxv"
+                android:layout_width="@dimen/_46pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_10pxh}"
+                imageRes="@{@drawable/img_rectangle29_46x46}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle29_46x46"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumncarrefourgraha"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_weight="0.8" android:layout_width="0dp" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCarrefourGraha"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{listrectangletwentynine1RowModel.txtCarrefourGraha}"
+                    style="@style/txtIntersemibold9" tools:text="@string/msg_carrefour_graha"/>
+                <TextView android:id="@+id/txtJlBoulevardG"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4pxv"
+                    android:layout_width="match_parent"
+                    android:text="@{listrectangletwentynine1RowModel.txtJlBoulevardG}"
+                    style="@style/txtInterregular8" tools:text="@string/msg_jl_boulevard_g"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

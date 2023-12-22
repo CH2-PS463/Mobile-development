@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listrectangletwentynineRowModel" type="com.satriasayur.app.modules.hasildeteksi.data.model.ListrectangletwentynineRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowrectangletwentynine"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylewhite_1">
+        <ImageView android:id="@+id/imageRectangleTwentyNine"
+            android:layout_height="@dimen/_65pxh"
+            android:layout_marginBottom="@dimen/_10pxv"
+            android:layout_marginStart="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_10pxv"
+            android:layout_width="@dimen/_90pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_10pxh}"
+            imageRes="@{@drawable/img_rectangle29}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle29"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumncahkangkung"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_9pxv"
+            android:layout_marginEnd="@dimen/_9pxh"
+            android:layout_marginStart="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_10pxv"
+            android:layout_weight="0.64" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCahKangkung"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{listrectangletwentynineRowModel.txtCahKangkung}"
+                style="@style/txtIntersemibold10" tools:text="@string/lbl_cah_kangkung"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowkalori"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtKaloriOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_weight="0.18"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{listrectangletwentynineRowModel.txtKaloriOne}"
+                    style="@style/txtInterregular8" tools:text="@string/lbl_kalori"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtKcalCounterOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_marginStart="@dimen/_27pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.24"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{listrectangletwentynineRowModel.txtKcalCounterOne}"
+                    style="@style/txtIntersemibold8" tools:text="@string/lbl_25_kcal"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtVitaminAOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_marginStart="@dimen/_6pxh"
+                    android:layout_weight="0.31"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{listrectangletwentynineRowModel.txtVitaminAOne}"
+                    style="@style/txtInterregular8" tools:text="@string/lbl_vitamin_a"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtIuCounterOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.27"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{listrectangletwentynineRowModel.txtIuCounterOne}"
+                    style="@style/txtIntersemibold8" tools:text="@string/lbl_6300_iu"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearRowkarbohidrat"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtKarbohidratOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_weight="0.35"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{listrectangletwentynineRowModel.txtKarbohidratOne}"
+                    style="@style/txtInterregular8" tools:text="@string/lbl_karbohidrat"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtWeightSix"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.18"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{listrectangletwentynineRowModel.txtWeightSix}"
+                    style="@style/txtIntersemibold8" tools:text="@string/lbl_3_14_g"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtVitaminCOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_marginStart="@dimen/_7pxh"
+                    android:layout_weight="0.28"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{listrectangletwentynineRowModel.txtVitaminCOne}"
+                    style="@style/txtInterregular8" tools:text="@string/lbl_vitamin_c"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtWeightOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.19"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{listrectangletwentynineRowModel.txtWeightOne}"
+                    style="@style/txtIntersemibold8" tools:text="@string/lbl_55_mg"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowprotein"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtProteinOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{listrectangletwentynineRowModel.txtProteinOne}"
+                    style="@style/txtInterregular8" tools:text="@string/lbl_protein"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtWeightTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_24pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{listrectangletwentynineRowModel.txtWeightTwo}"
+                    style="@style/txtIntersemibold8" tools:text="@string/lbl_2_60_g"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowlemak"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLemakOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{listrectangletwentynineRowModel.txtLemakOne}"
+                    style="@style/txtInterregular8" tools:text="@string/lbl_lemak"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtWeightThree"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_26pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{listrectangletwentynineRowModel.txtWeightThree}"
+                    style="@style/txtIntersemibold8" tools:text="@string/lbl_0_20_g"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

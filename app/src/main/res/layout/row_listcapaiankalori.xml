@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listcapaiankaloriRowModel" type="com.satriasayur.app.modules.dashboard.data.model.ListcapaiankaloriRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowcapaiankalori"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtCapaianKalori"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_1pxv"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_weight="0.61" android:layout_width="0dp"
+            android:singleLine="true"
+            android:text="@{listcapaiankaloriRowModel.txtCapaianKalori}"
+            style="@style/txtInterregular6" tools:text="@string/msg_capaian_kalori"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtOne"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_31pxh"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_weight="0.02" android:layout_width="0dp"
+            android:singleLine="true"
+            android:text="@{listcapaiankaloriRowModel.txtOne}"
+            style="@style/txtInterregular6" tools:text="@string/lbl"/>
+        <TextView android:ellipsize="end" android:id="@+id/txt02200kkal"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_1pxv"
+            android:layout_marginStart="@dimen/_5pxh"
+            android:layout_weight="0.37" android:layout_width="0dp"
+            android:singleLine="true"
+            android:text="@{listcapaiankaloriRowModel.txt02200kkal}"
+            style="@style/txtIntersemibold6" tools:text="@string/lbl_0_2200_kkal"/>
+    </LinearLayout>
+</layout>
